@@ -1,0 +1,36 @@
+/* Inventia App Styles */
+
+.App {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hide default scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #004aad;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056cc;
+}
+
+/* Selection Styling */
+::selection {
+  background: rgba(0, 74, 173, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(0, 74, 173, 0.3);
+  color: #ffffff;
+}
