@@ -55,7 +55,7 @@ const Support = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f8faff] via-[#bed3ff]/30 to-[#e8f0ff]">
       {/* Header */}
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-16 pt-12">
+      <div className="max-w-[1400px] mx-auto px-8 lg:px-16 pt-15">
         <div className="flex items-center justify-between">
           <Link to="/">
             <motion.button
@@ -85,7 +85,7 @@ const Support = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-[1400px] mx-auto px-8 lg:px-16 py-16"
+        className="max-w-[1400px] mx-auto px-8 lg:px-16 py-20 pt-10"
       >
         <div className="flex items-center gap-4 mb-6">
           <Headphones className="w-10 h-10 text-[#004aad]" />
