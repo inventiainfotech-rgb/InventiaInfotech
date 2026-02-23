@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import { mockData } from '../mock';
 import { supabase } from '../config/supabase';
+import { sendFormEmail } from '../lib/emailApi';
 
 const ContactForm = () => {
   const [ref, inView] = useInView({
@@ -91,14 +92,20 @@ const ContactForm = () => {
           const existing = JSON.parse(localStorage.getItem('mock_submissions') || '[]');
           existing.push({ ...submissionData, _mock: true, _created_at: new Date().toISOString() });
           localStorage.setItem('mock_submissions', JSON.stringify(existing));
-          setIsSubmitting(false);
-          setSubmitStatus('success');
-          setFormData({ first_name: '', last_name: '', email: '', phone: '', company: '', message: '' });
-          setTimeout(() => setSubmitStatus(null), 5000);
-          return;
         } catch (lsErr) {
           throw new Error('Failed to save submission locally: ' + (lsErr.message || lsErr));
         }
+
+        await sendFormEmail({
+          formType: 'contact_form',
+          ...formData
+        });
+
+        setIsSubmitting(false);
+        setSubmitStatus('success');
+        setFormData({ first_name: '', last_name: '', email: '', phone: '', company: '', message: '' });
+        setTimeout(() => setSubmitStatus(null), 5000);
+        return;
       }
 
       // Insert into Supabase with explicit error handling
@@ -109,6 +116,11 @@ const ContactForm = () => {
       if (result.error) {
         throw new Error(result.error.message || 'Failed to submit form');
       }
+
+      await sendFormEmail({
+        formType: 'contact_form',
+        ...formData
+      });
 
       setIsSubmitting(false);
       setSubmitStatus('success');

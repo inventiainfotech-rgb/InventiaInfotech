@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Headphones, MessageCircle, Mail, Phone, Clock, CheckCircle, AlertCircle, HelpCircle } from 'lucide-react';
+import { sendFormEmail } from '../../lib/emailApi';
 
 const Support = () => {
   useEffect(() => {
@@ -15,6 +16,9 @@ const Support = () => {
     priority: 'medium',
     description: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const supportChannels = [
     {
@@ -47,9 +51,32 @@ const Support = () => {
     { service: 'Customer Portal', status: 'operational', uptime: '99.97%' }
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Support ticket submitted! Our team will contact you shortly.');
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setErrorMessage(null);
+
+    try {
+      await sendFormEmail({
+        formType: 'support_ticket',
+        ...ticketForm
+      });
+
+      setIsSubmitting(false);
+      setSubmitStatus('success');
+      setTicketForm({
+        name: '',
+        email: '',
+        subject: '',
+        priority: 'medium',
+        description: ''
+      });
+      setTimeout(() => setSubmitStatus(null), 5000);
+    } catch (err) {
+      setIsSubmitting(false);
+      setErrorMessage(err?.message || 'Failed to submit support ticket.');
+    }
   };
 
   return (
@@ -198,10 +225,23 @@ const Support = () => {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-4 bg-gradient-to-r from-[#004aad] to-[#0066cc] text-white font-bold rounded-xl hover:shadow-lg transition-all"
+                disabled={isSubmitting}
+                className="w-full py-4 bg-gradient-to-r from-[#004aad] to-[#0066cc] text-white font-bold rounded-xl hover:shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Submit Ticket
+                {isSubmitting ? 'Submitting...' : 'Submit Ticket'}
               </motion.button>
+
+              {submitStatus === 'success' && (
+                <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-xl text-sm">
+                  Support ticket submitted. Our team will contact you shortly.
+                </div>
+              )}
+
+              {errorMessage && (
+                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm">
+                  {errorMessage}
+                </div>
+              )}
             </form>
           </motion.div>
 

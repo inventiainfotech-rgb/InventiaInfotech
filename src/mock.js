@@ -12,29 +12,29 @@ export const mockData = {
   services: [
     {
       id: 1,
-      title: "Advanced Barcode & RFID Tracking",
-      description: "Deploy next-generation barcode systems and RFID solutions to automate inventory management, asset tracking, and warehouse operations with unmatched accuracy.",
+      title: "Barcode & RFID Solutions",
+      description: "Complete barcode and RFID solutions including barcode scanners, barcode printers, RFID readers, asset tracking systems, warehouse barcode systems, and inventory tracking solutions.",
       icon: "scan",
       features: ["Enterprise barcode printing & scanning systems", "RFID-enabled warehouse tracking systems", "Real-time inventory visibility"]
     },
     {
       id: 2,
       title: "Cyber Security Solutions",
-      description: "Protect your digital assets with enterprise-grade cybersecurity solutions designed to detect threats, prevent breaches, and ensure regulatory compliance.",
+      description: "Comprehensive cybersecurity services including network security solutions, endpoint security, firewall solutions, SIEM solutions, vulnerability assessment, and penetration testing.",
       icon: "shield",
       features: ["Zero Trust security architecture", "Network & endpoint protection", "Real-time threat detection & response"]
     },
     {
       id: 3,
       title: "High-Performance Networking",
-      description: "Design and deploy secure, high-performance networking solutions that enable seamless connectivity across offices, data centers, and cloud environments.",
+      description: "Robust networking infrastructure solutions including structured cabling services, LAN WAN network solutions, fiber optic cabling, wireless networks, CCTV surveillance systems, and access control systems.",
       icon: "network",
       features: ["Enterprise LAN & WAN architecture", "SD-WAN implementation", "Secure network segmentation"]
     },
     {
       id: 4,
       title: "Infrastructure & Cloud Solutions",
-      description: "Build a resilient technology foundation with full-stack IT infrastructure solutions — from on-premise servers to cloud-native architectures.",
+      description: "Secure cloud and data center solutions including private cloud, hybrid cloud, data center design services, server virtualization, cloud migration services, and backup and disaster recovery.",
       icon: "server",
       features: ["Server & data center architecture", "Cloud migration & hybrid IT", "DevOps automation"]
     }

@@ -13,87 +13,143 @@ const FAQ = () => {
 
   const faqs = [
     {
-      category: 'General',
+      category: 'Managed IT Services – FAQ',
       questions: [
         {
-          q: 'What services does Inventia provide?',
-          a: 'We provide comprehensive IT infrastructure and security solutions including Barcode/RFID systems, Automation, Cyber Security Solutions, Networking Solutions, and Full Stack IT Infrastructure management.'
+          q: 'What are managed IT services for businesses?',
+          a: ' Managed IT services involve proactive monitoring, maintenance, and support of business IT infrastructure under a structured service agreement to ensure uptime, security, and performance.'
         },
         {
-          q: 'Do you work with small businesses or only enterprises?',
-          a: 'While we specialize in enterprise solutions, we work with organizations of all sizes. Our scalable approach ensures that whether you\'re a growing startup or a Fortune 500 company, we can tailor our services to your needs.'
+          q: 'What is included in an IT AMC contract?',
+          a: 'An IT AMC typically includes infrastructure maintenance, system monitoring, troubleshooting, helpdesk support, preventive maintenance, and SLA-based incident resolution.'
         },
         {
-          q: 'What industries do you serve?',
-          a: 'We serve a wide range of industries including finance, healthcare, retail, manufacturing, logistics, and technology. Our solutions are adaptable to any sector requiring robust IT infrastructure and security.'
+          q: 'Are managed IT services suitable for enterprises and multi-location businesses?',
+          a: 'Yes. Managed IT services scale effectively for enterprises, branch offices, warehouses, and multi-location operations with centralized monitoring and governance.'
+        },
+        {
+          q: 'How does proactive IT monitoring reduce downtime?',
+          a: 'Proactive IT monitoring detects performance issues, hardware failures, and security threats before they impact business operations.'
         }
       ]
     },
     {
-      category: 'Services & Solutions',
+      category: 'Cybersecurity Services – FAQ',
       questions: [
         {
-          q: 'What is included in your Cyber Security Solution?',
-          a: 'Our cybersecurity services include threat assessment, vulnerability scanning, penetration testing, security audits, incident response, compliance management, and 24/7 security monitoring.'
+          q: 'What do enterprise cybersecurity services include?',
+          a: 'Enterprise cybersecurity services include network security, endpoint protection, SOC monitoring, cloud security, compliance management, and threat response.'
         },
         {
-          q: 'How do RFID and Barcode solutions improve business operations?',
-          a: 'RFID and Barcode solutions automate inventory tracking, reduce manual errors, improve supply chain visibility, enable real-time asset management, and significantly increase operational efficiency.'
+          q: 'Do you provide SOC services for enterprises?',
+          a: 'Yes. We provide SOC services including real-time threat monitoring, incident detection, and response aligned with enterprise security frameworks.'
         },
         {
-          q: 'Can you integrate with our existing systems?',
-          a: 'Yes, we specialize in seamless integration with existing systems. Our team conducts thorough assessments and develops custom integration strategies to ensure minimal disruption to your operations.'
+          q: 'Can cybersecurity services help with regulatory compliance?',
+          a: 'Yes. Our cybersecurity solutions support compliance requirements across data protection, industry regulations, and security audits.'
+        },
+        {
+          q: 'How do you prevent data breaches?',
+          a: 'We use layered security controls, continuous monitoring, endpoint protection, and network security solutions to reduce breach risks.'
         }
       ]
     },
     {
-      category: 'Pricing & Contracts',
+      category: 'Barcode & RFID Solutions – FAQ',
       questions: [
         {
-          q: 'How is pricing structured?',
-          a: 'Our pricing is customized based on your specific requirements, scope of work, and scale of deployment. We offer flexible pricing models including project-based, subscription, and managed services arrangements.'
+          q: 'What industries benefit from barcode and RFID solutions?',
+          a: ' Industries such as logistics, manufacturing, pharma, retail, and warehousing benefit significantly from barcode and RFID solutions.'
         },
         {
-          q: 'Do you offer long-term support contracts?',
-          a: 'Yes, we provide comprehensive support contracts with 24/7 monitoring, regular maintenance, updates, and dedicated account management. Our SLA guarantees 99.9% uptime for critical services.'
+          q: 'What is the difference between barcode and RFID systems?',
+          a: 'Barcode systems require line-of-sight scanning, while RFID enables automated, non-line-of-sight asset and inventory tracking.'
         },
         {
-          q: 'Is there a minimum contract period?',
-          a: 'Contract periods vary by service type. While some projects are one-time implementations, managed services typically have 12-month minimum terms with flexible renewal options.'
+          q: 'Can RFID systems integrate with ERP or WMS platforms?',
+          a: 'Yes. Our RFID solutions integrate seamlessly with ERP, WMS, and enterprise software platforms.'
+        },
+        {
+          q: 'Do you provide RFID hardware and software together?',
+          a: 'Yes. We deliver end-to-end RFID solutions including hardware, software, deployment, and support.'
         }
       ]
     },
     {
-      category: 'Implementation & Support',
+      category: 'Networking Infrastructure – FAQ',
       questions: [
         {
-          q: 'How long does implementation take?',
-          a: 'Implementation timelines vary based on project scope. Simple solutions can be deployed in 2-4 weeks, while complex enterprise infrastructure projects may take 3-6 months. We provide detailed timelines during planning.'
+          q: 'What does enterprise networking infrastructure include?',
+          a: 'Enterprise networking includes LAN, WAN, structured cabling, wireless networks, and data center connectivity.'
         },
         {
-          q: 'What kind of support do you provide post-implementation?',
-          a: 'We offer 24/7 technical support, regular system monitoring, proactive maintenance, security updates, performance optimization, and dedicated account managers for all enterprise clients.'
+          q: 'Do you design scalable enterprise networks?',
+          a: 'Yes. Our networking infrastructure solutions are designed for scalability, performance, and security.'
         },
         {
-          q: 'Do you provide training for our team?',
-          a: 'Yes, comprehensive training is included in all implementations. We offer onsite training, online workshops, documentation, and ongoing education programs to ensure your team can effectively use our solutions.'
+          q: 'Can you support multi-site network deployments?',
+          a: 'Yes. We design and manage networks across corporate offices, factories, warehouses, and campuses.'
         }
       ]
     },
     {
-      category: 'Security & Compliance',
+      category: 'IT Infrastructure & Cloud – FAQ',
       questions: [
         {
-          q: 'What security certifications do you hold?',
-          a: 'Our team holds industry-leading certifications including CISSP, CEH, CISM, CompTIA Security+, and we maintain ISO 27001 compliance for information security management.'
+          q: 'What are IT infrastructure services?',
+          a: ' IT infrastructure services include servers, storage, virtualization, cloud platforms, and IT modernization.'
         },
         {
-          q: 'How do you ensure data privacy?',
-          a: 'We follow strict data privacy protocols compliant with GDPR, CCPA, and industry-specific regulations. All data is encrypted in transit and at rest, with access controls and regular security audits.'
+          q: 'Do you support hybrid cloud environments?',
+          a: 'Yes. We design and manage hybrid cloud solutions aligned with enterprise requirements.'
         },
         {
-          q: 'Can you help with compliance requirements?',
-          a: 'Yes, we assist with compliance for various standards including PCI DSS, HIPAA, SOC 2, and industry-specific regulations. Our team provides gap analysis, implementation, and ongoing compliance monitoring.'
+          q: 'Can you help migrate legacy systems to the cloud?',
+          a: 'Yes. Our cloud migration services ensure secure and minimal-downtime transitions.'
+        }
+      ]
+    },
+    {
+
+      category: 'Automation & IoT – FAQ',
+      questions: [
+        {
+          q: 'What are industrial automation solutions?',
+          a: '  Industrial automation solutions use connected systems, sensors, and control platforms to optimize operations.'
+        },
+        {
+          q: 'What is an IoT system integrator?',
+          a: ' An IoT system integrator designs, deploys, and manages connected device ecosystems and data platforms.'
+        },
+        {
+          q: 'Can automation improve operational efficiency?',
+          a: 'Yes. Automation reduces manual effort, improves accuracy, and enables real-time decision-making.'
+        }
+      ]
+    },
+    {
+      category: 'Surveillance & Access Control – FAQ',
+      questions: [
+        {
+          q: 'What does an enterprise surveillance system include?',
+          a: 'Enterprise surveillance includes CCTV cameras, access control systems, centralized monitoring, and analytics.'
+        },
+        {
+          q: 'Can access control systems integrate with surveillance?',
+          a: ' Yes. Integrated security solutions improve monitoring, access management, and incident response.'
+        }
+      ]
+    },
+    {
+      category: 'Industry-Specific Solutions – FAQ',
+      questions: [
+        {
+          q: 'Do you customize solutions for different industries?',
+          a: 'Yes. We design industry-specific technology solutions based on operational, compliance, and scalability needs.'
+        },
+        {
+          q: 'Which industries do you serve?',
+          a: 'We serve logistics, manufacturing, pharma, healthcare, retail, and warehouse-driven industries.'
         }
       ]
     }
@@ -117,16 +173,16 @@ const FAQ = () => {
               Back to Home
             </motion.button>
           </Link>
-          
+
           {/* Circular Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <img 
-              src="https://customer-assets.emergentagent.com/job_security-portfolio-4/artifacts/yeywo8ds_INVeNTi.png" 
-              alt="Inventia Logo" 
+            <img
+              src="https://customer-assets.emergentagent.com/job_security-portfolio-4/artifacts/yeywo8ds_INVeNTi.png"
+              alt="Inventia Logo"
               className="h-16 w-16 object-cover rounded-full shadow-lg"
             />
           </motion.div>

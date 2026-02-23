@@ -31,7 +31,7 @@ const Services = () => {
         >
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="w-12 h-[2px] bg-gradient-to-r from-transparent to-[#004aad]" />
-            <span className="text-xs sm:text-sm text-[#718096] uppercase tracking-widest">Services Ecosystem</span>
+            <span className="text-xs sm:text-sm text-[#718096] uppercase tracking-widest">OUR TECHNOLOGY SERVICE SOLUTIONS</span>
             <div className="w-12 h-[2px] bg-gradient-to-l from-transparent to-[#004aad]" />
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a1a2e] mb-4">

@@ -41,6 +41,35 @@ const RfidBarcode = () => {
     }
   ];
 
+  const businessOfferings = [
+    'End-to-End Barcode Rfid Solution',
+    'Warehouse Management System',
+    'Inventory Management and Tracking  Solutions',
+    'Traceability solutions'
+  ];
+
+  const businessProblems = [
+    'Inventory Inaccuracies',
+    'Asset Misplacement',
+    'Manual Warehouse Processes',
+    'Poor Traceability and Compliance'
+  ];
+
+  const whyChooseUs = [
+    'Certified engineers & solution architects',
+    'Proven implementation methodologies',
+    'Vendor-neutral consulting approach',
+    'End-to-end design, deployment & Support',
+    'Enterprise-grade technology solutions'
+  ];
+
+  const technologyComponents = [
+    'Barcode/RFID Software Solutions',
+    'Barcode Printer and Scanners',
+    'RFID Printer and RFID Scanners',
+    'Barcode Labels and Barcode Ribbons'
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f8faff] via-[#bed3ff]/30 to-[#e8f0ff]">
       {/* Header */}
@@ -89,15 +118,15 @@ const RfidBarcode = () => {
           </span>
         </div>
         <h1 className="text-5xl lg:text-6xl font-bold text-[#1a1a2e] mb-6">
-          RFID & Barcode{' '}
+          Barcode & RFID Solutions{' '}
           <span className="bg-gradient-to-r from-[#e91e63] to-[#c2185b] bg-clip-text text-transparent">
-            Solutions
+            for Enterprises
           </span>
         </h1>
         <p className="text-xl text-[#4a5568] max-w-3xl">
-          Deploy next-generation barcode systems and RFID solutions to automate inventory management, asset tracking, and warehouse operations with unmatched accuracy.
+          We are a Full-Scale Barcode Solutions and RFID Solutions provider that delivers Tracking Systems for Inventory, Warehouse and Asset. It ensures Real Time  Visibility across Enterprises.
         </p>
-        <p className="text-xl text-[#4a5568] max-w-3xl">Inventia delivers enterprise-grade barcode system deployments and RFID tracking system integrations that give you real-time visibility—across warehouses, supply chains, and multiple business locations.</p>
+        
       </motion.div>
 
       {/* Features Grid */}
@@ -118,6 +147,108 @@ const RfidBarcode = () => {
             </motion.div>
           ))}
         </div>
+
+          {/* Our Barcode & RFID Offerings */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+        >
+          <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Our Barcode & RFID Offerings</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {businessOfferings.map((problem, index) => (
+              <motion.div
+                key={problem}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ y: -4 }}
+                className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+              >
+                <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                <p className="text-[#2d3748] font-semibold">{problem}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Business Problems Solved */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+        >
+          <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Business Problems Solved</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {businessProblems.map((problem, index) => (
+              <motion.div
+                key={problem}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ y: -4 }}
+                className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+              >
+                <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                <p className="text-[#2d3748] font-semibold">{problem}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Technology Components */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+        >
+          <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Technology Components</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {technologyComponents.map((problem, index) => (
+              <motion.div
+                key={problem}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ y: -4 }}
+                className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+              >
+                <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                <p className="text-[#2d3748] font-semibold">{problem}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Why Choose Us */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.55 }}
+          className="mt-12 rounded-3xl p-8 md:p-10 bg-gradient-to-r from-[#1a1a2e] to-[#2b2b48] text-white shadow-xl"
+        >
+          <h2 className="text-3xl font-bold mb-8">Why Choose Our RFID &amp; Barcode Solutions</h2>
+          <div className="space-y-4">
+            {whyChooseUs.map((point, index) => (
+              <motion.div
+                key={point}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ x: 4 }}
+                className="flex items-center gap-4 rounded-2xl bg-white/10 border border-white/15 px-5 py-4"
+              >
+                <span className="h-8 w-8 rounded-full bg-[#e91e63] text-white text-sm font-bold flex items-center justify-center shrink-0">
+                  {index + 1}
+                </span>
+                <p className="text-white/90 font-medium">{point}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Stats Section */}
         <motion.div

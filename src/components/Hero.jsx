@@ -19,19 +19,18 @@ const Hero = () => {
 
   // Services - 6 points, all in blue theme
   const servicesWithColors = [
-    { name: 'Cyber Security Solutions', color: '#004aad' },
-    { name: 'Barcode System', color: '#004aad' },
-    { name: 'RFID Solutions', color: '#004aad' },
+    { name: 'Barcode Solution', color: '#004aad' },
+    { name: 'Rfid Solution', color: '#004aad' },
+    { name: 'Wireless Solutions', color: '#004aad' },
     { name: 'IT Infrastructure', color: '#004aad' },
-    { name: 'Networking Solutions', color: '#004aad' },
-    { name: 'Inventory Tracking', color: '#004aad' }
+    { name: 'Networking', color: '#004aad' },
+    { name: 'Cyber Security', color: '#004aad' }
   ];
 
   const services = servicesWithColors.map(s => s.name);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#f8faff] via-[#bed3ff]/40 to-[#e8f0ff] pt-5 pb-24">
-
 
 
       
@@ -229,9 +228,9 @@ const Hero = () => {
               transition={{ delay: 0.7 }}
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-[#1a1a2e]"
             >
-              Securing Tomorrow's{' '}
+              End-to-End IT, Networking &{' '}
               <span className="bg-gradient-to-r from-[#004aad] to-[#0066cc] bg-clip-text text-transparent">
-                Digital Infrastructure
+              Automation Solutions Provider
               </span>
             </motion.h1>
 
@@ -242,7 +241,7 @@ const Hero = () => {
               transition={{ delay: 0.9 }}
               className="text-sm sm:text-base lg:text-lg xl:text-xl text-[#4a5568] leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              Enterprise-grade cybersecurity solutions, barcode systems, RFID solutions, networking, and IT infrastructure
+              Enterprise-grade cybersecurity solutions, barcode systems, RFID solutions, networking, and IT infrastructure.
             </motion.p>
 
             {/* Services Grid */}
@@ -284,7 +283,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <span className="flex items-center justify-center gap-2">
-                  Get Started
+                  Request Consultation
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -298,7 +297,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <span className="flex items-center justify-center gap-2">
-                  Explore Solutions
+                  Explore Our Solutions
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>

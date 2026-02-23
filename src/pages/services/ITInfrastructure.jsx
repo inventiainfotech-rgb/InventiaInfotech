@@ -40,6 +40,18 @@ const ITInfrastructure = () => {
       description: 'Connect legacy systems with modern applications to enable automation, data flow, and seamless enterprise operations.'
     }
   ];
+  
+  const itsolutions = [
+    'Hybrid cloud solutions',
+    'Server virtualization services',
+    'Enterprise IT solutions provider services'
+  ];
+
+  const itcapabilities = [
+    'Cloud migration services',
+    'IT modernization solutions',
+    'Secure cloud architecture'
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f8faff] via-[#bed3ff]/30 to-[#e8f0ff]">
@@ -60,9 +72,9 @@ const ITInfrastructure = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <img 
-              src="https://customer-assets.emergentagent.com/job_security-portfolio-4/artifacts/yeywo8ds_INVeNTi.png" 
-              alt="Inventia Logo" 
+            <img
+              src="https://customer-assets.emergentagent.com/job_security-portfolio-4/artifacts/yeywo8ds_INVeNTi.png"
+              alt="Inventia Logo"
               className="h-16 w-16 object-cover rounded-full shadow-lg"
             />
           </motion.div>
@@ -89,15 +101,15 @@ const ITInfrastructure = () => {
           </span>
         </div>
         <h1 className="text-5xl lg:text-6xl font-bold text-[#1a1a2e] mb-6">
-          IT Infrastructure{' '}
+          IT Infrastructure {' '}
           <span className="bg-gradient-to-r from-[#8b5cf6] to-[#7c3aed] bg-clip-text text-transparent">
-            Solutions
+            & Cloud Services
           </span>
         </h1>
         <p className="text-xl text-[#4a5568] max-w-3xl">
-          End-to-end IT infrastructure solutions built for performance, security, and scale.
+          We deliver IT infrastructure services and cloud infrastructure solutions that modernize enterprise IT environments while ensuring performance, security, and scalability.
         </p>
-        <p className="text-xl text-[#4a5568] max-w-3xl">Inventia delivers enterprise-grade IT infrastructure solutions that modernize your technology ecosystem—from server architecture and cloud infrastructure to DevOps automation and full observability. We help organizations reduce downtime, cut operational costs, and accelerate deployment speed with resilient, future-ready platforms.</p>
+
       </motion.div>
 
       {/* Features Grid */}
@@ -118,6 +130,58 @@ const ITInfrastructure = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Our Solutions Include */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+        >
+          <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Our Solutions Include</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {itsolutions.map((problem, index) => (
+              <motion.div
+                key={problem}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ y: -4 }}
+                className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+              >
+                <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                <p className="text-[#2d3748] font-semibold">{problem}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/*Capabilities*/}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+        >
+          <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Capabilities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {itcapabilities.map((problem, index) => (
+              <motion.div
+                key={problem}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ y: -4 }}
+                className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+              >
+                <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                <p className="text-[#2d3748] font-semibold">{problem}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        
 
         {/* Stats */}
         <motion.div

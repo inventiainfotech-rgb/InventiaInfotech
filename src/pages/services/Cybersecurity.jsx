@@ -41,6 +41,44 @@ const Cybersecurity = () => {
     }
   ];
 
+  const cyberchallenges = [
+    'Data breaches and ransomware attacks',
+    'Insecure endpoints and user devices',
+    'Cloud security misconfigurations',
+    'Compliance and audit failures',
+    'Lack of real-time threat visibility'
+  ];
+
+  const cybersolutions = [
+    'VAPT (Vulnerability Assessment & Penetration Testing)',
+    'Network Security Solution',
+    'SOC Services provider support',
+    'Cloud security services',
+    'IT Security Audit',
+    'Regulatory Audit Readiness',
+    'ISO Implementation & Certification Support',
+    'DPDP & Data Privacy Services',
+    'Incident Response & Cyber Resilience',
+    'Security Awareness & Training',
+    'Hardware & Software Licensing'
+  ];
+
+  const cybercapabilities = [
+    'CData Breach Prevention strategies',
+    'Enterprise cyber protection frameworks',
+    'Continuous monitoring and threat detection',
+    'Compliance security solutions'
+  ];
+
+  const cyberwhyChooseUs = [
+    'Defense-in-depth security architecture',
+    'Compliance-aligned security controls',
+    'Enterprise SOC capabilities',
+    'Proactive risk management'
+  ];
+
+  
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f8faff] via-[#bed3ff]/30 to-[#e8f0ff]">
       {/* Header */}
@@ -89,14 +127,14 @@ const Cybersecurity = () => {
           </span>
         </div>
         <h1 className="text-5xl lg:text-6xl font-bold text-[#1a1a2e] mb-6">
-          Cyber Security{' '}
+          Enterprise Cyber{' '}
           <span className="bg-gradient-to-r from-[#0066cc] to-[#004aad] bg-clip-text text-transparent">
-            Solutions
+           security Services
           </span>
         </h1>
         <p className="text-xl text-[#4a5568] max-w-3xl">
-          Multi-layered defense systems protecting your critical infrastructure. Real-time threat detection, 
-          vulnerability assessment, and compliance management for enterprise-grade security.
+          Our Enterprise Cybersecurity Services Protect organizations against evolving cyber threats across networks, endpoints, and cloud environments. We deliver comprehensive cybersecurity services designed for risk reduction, compliance, and business continuity.
+
         </p>
       </motion.div>
 
@@ -118,6 +156,108 @@ const Cybersecurity = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Cybersecurity Challenges We Address */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+                >
+                  <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Cybersecurity Challenges We Address</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {cyberchallenges.map((problem, index) => (
+                      <motion.div
+                        key={problem}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.45, delay: index * 0.08 }}
+                        whileHover={{ y: -4 }}
+                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                      >
+                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                        <p className="text-[#2d3748] font-semibold">{problem}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+        
+                {/* Our Cybersecurity Solutions */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+                >
+                  <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Our Cybersecurity Solutions</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {cybersolutions.map((problem, index) => (
+                      <motion.div
+                        key={problem}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.45, delay: index * 0.08 }}
+                        whileHover={{ y: -4 }}
+                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                      >
+                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                        <p className="text-[#2d3748] font-semibold">{problem}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+        
+                {/* Security Capabilities */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+                >
+                  <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Security Capabilities</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {cybercapabilities.map((problem, index) => (
+                      <motion.div
+                        key={problem}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.45, delay: index * 0.08 }}
+                        whileHover={{ y: -4 }}
+                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                      >
+                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                        <p className="text-[#2d3748] font-semibold">{problem}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+        
+                {/* Why Choose Our Cybersecurity Services */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.55 }}
+                  className="mt-12 rounded-3xl p-8 md:p-10 bg-gradient-to-r from-[#1a1a2e] to-[#2b2b48] text-white shadow-xl"
+                >
+                  <h2 className="text-3xl font-bold mb-8">Why Choose Our Cybersecurity &amp; Solutions</h2>
+                  <div className="space-y-4">
+                    {cyberwhyChooseUs.map((point, index) => (
+                      <motion.div
+                        key={point}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.45, delay: index * 0.08 }}
+                        whileHover={{ x: 4 }}
+                        className="flex items-center gap-4 rounded-2xl bg-white/10 border border-white/15 px-5 py-4"
+                      >
+                        <span className="h-8 w-8 rounded-full bg-[#e91e63] text-white text-sm font-bold flex items-center justify-center shrink-0">
+                          {index + 1}
+                        </span>
+                        <p className="text-white/90 font-medium">{point}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
 
         {/* CTA Section */}
         <motion.div

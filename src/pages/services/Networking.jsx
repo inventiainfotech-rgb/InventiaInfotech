@@ -41,6 +41,26 @@ const Networking = () => {
     }
   ];
 
+  const networkchallenges = [
+    'Poor network performance',
+    'Unreliable connectivity',
+    'Scalability limitations',
+    'Security vulnerabilities'
+  ];
+
+  const networkservices = [
+    'LAN WAN network solutions',
+    'Structured cabling solutions',
+    'Wireless networking solutions',
+    'Data center networking'
+  ];
+
+  const networkCapabilities = [
+    'Enterprise network design',
+    'Network performance optimization',
+    'Scalable business networks'
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f8faff] via-[#bed3ff]/30 to-[#e8f0ff]">
       {/* Header */}
@@ -89,15 +109,15 @@ const Networking = () => {
           </span>
         </div>
         <h1 className="text-5xl lg:text-6xl font-bold text-[#1a1a2e] mb-6">
-          Networking{' '}
+          Enterprise Networking{' '}
           <span className="bg-gradient-to-r from-[#00a86b] to-[#008855] bg-clip-text text-transparent">
-            Solutions
+            Infrastructure Solutions
           </span>
         </h1>
         <p className="text-xl text-[#4a5568] max-w-3xl">
-          High-performance networking solutions engineered for scalability, security, and global reliability.
+          Our networking infrastructure solutions deliver secure, high-performance, and scalable connectivity for enterprises across offices, campuses, warehouses, and data centers.
         </p>
-        <p className="text-xl text-[#4a5568] max-w-3xl">Inventia designs and deploys enterprise-grade networking solutions that connect offices, data centers, and cloud environments with secure, low-latency performance. From SD-WAN services and Wi-Fi 6/6E to advanced network security, we build resilient networks that keep your business fast, connected, and protected.</p>
+        
       </motion.div>
 
       {/* Features Grid */}
@@ -118,6 +138,83 @@ const Networking = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Networking Challenges We Solve */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+                >
+                  <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Networking Challenges We Solve</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {networkchallenges.map((problem, index) => (
+                      <motion.div
+                        key={problem}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.45, delay: index * 0.08 }}
+                        whileHover={{ y: -4 }}
+                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                      >
+                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                        <p className="text-[#2d3748] font-semibold">{problem}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+        
+                {/* Our Networking Services */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+                >
+                  <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Our Networking Services</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {networkservices.map((problem, index) => (
+                      <motion.div
+                        key={problem}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.45, delay: index * 0.08 }}
+                        whileHover={{ y: -4 }}
+                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                      >
+                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                        <p className="text-[#2d3748] font-semibold">{problem}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+        
+                {/* Network Capabilities */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+                >
+                  <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Network Capabilities</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {networkCapabilities.map((problem, index) => (
+                      <motion.div
+                        key={problem}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.45, delay: index * 0.08 }}
+                        whileHover={{ y: -4 }}
+                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                      >
+                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                        <p className="text-[#2d3748] font-semibold">{problem}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+        
+               
 
         {/* Network Stats */}
         <motion.div
