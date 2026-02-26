@@ -228,9 +228,9 @@ const Hero = () => {
               transition={{ delay: 0.7 }}
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-[#1a1a2e]"
             >
-              RFID, Barcode & IT{' '}
+              Barcode Rfid Solution | Network{' '}
               <span className="bg-gradient-to-r from-[#004aad] to-[#0066cc] bg-clip-text text-transparent">
-              Security — Simplified
+              Solution | Cybersecurity Solution
               </span>
             </motion.h1>
 

@@ -32,7 +32,7 @@ const Support = () => {
       icon: Mail,
       title: 'Email Support',
       description: 'Response within 4 business hours',
-      action: 'inventiainfotech@gmail.com',
+      action: 'sales@inventiainfotech.com',
       color: '#00a86b'
     },
     {
