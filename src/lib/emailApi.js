@@ -24,6 +24,27 @@ const buildFrontendProviderPayload = (payload) => {
   };
 };
 
+const buildAutoResponseMessage = (payload) => {
+  if (payload?.formType === 'support_ticket') {
+    return [
+      'Thanks for contacting Inventia support.',
+      '',
+      `Ticket Subject: ${payload?.subject || '-'}`,
+      `Priority: ${payload?.priority || 'medium'}`,
+      '',
+      'Our team has received your request and will get back to you shortly.'
+    ].join('\n');
+  }
+
+  const fullName = `${payload?.first_name || ''} ${payload?.last_name || ''}`.trim();
+  return [
+    `Hi ${fullName || 'there'},`,
+    '',
+    'Thank you for contacting Inventia.',
+    'We have received your message and our team will respond soon.'
+  ].join('\n');
+};
+
 const sendViaServerApi = async (endpoint, payload) => {
   let response;
   try {
@@ -69,6 +90,7 @@ const sendViaFormSubmit = async (payload) => {
   }
 
   const mapped = buildFrontendProviderPayload(payload);
+  const autoResponse = buildAutoResponseMessage(payload);
   const endpoint = `https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`;
 
   let response;
@@ -82,6 +104,8 @@ const sendViaFormSubmit = async (payload) => {
       body: JSON.stringify({
         ...mapped,
         _subject: mapped.subject,
+        _replyto: mapped.email,
+        _autoresponse: autoResponse,
         _template: 'table',
         _captcha: 'false'
       })
