@@ -147,9 +147,9 @@ const ITInfrastructure = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
                 whileHover={{ y: -4 }}
-                className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#7c3aed] border border-[#7c3aed]"
               >
-                <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                <span className="mt-0.5 h-3 w-3 rounded-full bg-[#7c3aed] shrink-0" />
                 <p className="text-[#2d3748] font-semibold">{problem}</p>
               </motion.div>
             ))}
@@ -172,9 +172,9 @@ const ITInfrastructure = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
                 whileHover={{ y: -4 }}
-                className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#7c3aed] border border-[#7c3aed]"
               >
-                <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                <span className="mt-0.5 h-3 w-3 rounded-full bg-[#7c3aed] shrink-0" />
                 <p className="text-[#2d3748] font-semibold">{problem}</p>
               </motion.div>
             ))}

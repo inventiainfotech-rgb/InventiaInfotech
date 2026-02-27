@@ -173,9 +173,9 @@ const Cybersecurity = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.45, delay: index * 0.08 }}
                         whileHover={{ y: -4 }}
-                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#e6f2ff] border border-[#e6f2ff]"
                       >
-                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#004aad] shrink-0" />
                         <p className="text-[#2d3748] font-semibold">{problem}</p>
                       </motion.div>
                     ))}
@@ -187,7 +187,7 @@ const Cybersecurity = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
-                  className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#bed3ff]/30"
+                  className="mt-20 bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg border border-[#004aad]/30"
                 >
                   <h2 className="text-3xl font-bold text-[#1a1a2e] mb-8">Our Cybersecurity Solutions</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -198,9 +198,9 @@ const Cybersecurity = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.45, delay: index * 0.08 }}
                         whileHover={{ y: -4 }}
-                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#e6f2ff] border border-[#e6f2ff]"
                       >
-                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#004aad] shrink-0" />
                         <p className="text-[#2d3748] font-semibold">{problem}</p>
                       </motion.div>
                     ))}
@@ -223,9 +223,9 @@ const Cybersecurity = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.45, delay: index * 0.08 }}
                         whileHover={{ y: -4 }}
-                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#ffe8f1] border border-[#f5bfd3]"
+                        className="flex items-start gap-3 p-5 rounded-2xl bg-gradient-to-r from-white to-[#e6f2ff] border border-[#e6f2ff]"
                       >
-                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#e91e63] shrink-0" />
+                        <span className="mt-0.5 h-3 w-3 rounded-full bg-[#004aad] shrink-0" />
                         <p className="text-[#2d3748] font-semibold">{problem}</p>
                       </motion.div>
                     ))}
@@ -250,7 +250,7 @@ const Cybersecurity = () => {
                         whileHover={{ x: 4 }}
                         className="flex items-center gap-4 rounded-2xl bg-white/10 border border-white/15 px-5 py-4"
                       >
-                        <span className="h-8 w-8 rounded-full bg-[#e91e63] text-white text-sm font-bold flex items-center justify-center shrink-0">
+                        <span className="h-8 w-8 rounded-full bg-[#004aad] text-white text-sm font-bold flex items-center justify-center shrink-0">
                           {index + 1}
                         </span>
                         <p className="text-white/90 font-medium">{point}</p>
