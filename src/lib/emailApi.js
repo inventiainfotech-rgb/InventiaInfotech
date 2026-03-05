@@ -80,6 +80,11 @@ const sendViaServerApi = async (endpoint, payload) => {
     throw new Error(message);
   }
 
+  // Server API must explicitly acknowledge mail dispatch.
+  if (responseBody?.ok !== true) {
+    throw new Error('Email API did not confirm delivery.');
+  }
+
   return responseBody;
 };
 
@@ -130,11 +135,24 @@ const sendViaFormSubmit = async (payload) => {
 
 export const sendFormEmail = async (payload) => {
   const endpoint = process.env.REACT_APP_EMAIL_API_URL || DEFAULT_EMAIL_ENDPOINT;
+  const hasFrontendRecipient = Boolean(process.env.REACT_APP_FORM_EMAIL_TO);
+
+  // If no dedicated backend is configured, skip /api call and use frontend provider.
+  if (hasFrontendRecipient && endpoint === DEFAULT_EMAIL_ENDPOINT) {
+    return sendViaFormSubmit(payload);
+  }
 
   try {
     return await sendViaServerApi(endpoint, payload);
   } catch (err) {
-    if (String(err?.message || '').includes('not found')) {
+    // Fallback to frontend provider when backend route is missing or invalid.
+    if (
+      hasFrontendRecipient &&
+      (
+        String(err?.message || '').includes('not found') ||
+        String(err?.message || '').includes('did not confirm delivery')
+      )
+    ) {
       return sendViaFormSubmit(payload);
     }
     throw err;
